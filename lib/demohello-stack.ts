@@ -15,5 +15,14 @@ export class DemohelloStack extends cdk.Stack {
         type: ddb.AttributeType.STRING,
       },
     });
-  }
+
+   const productTable2 = new ddb.Table(this, 'Table2', {
+    tableName:"TestTable2",
+    partitionKey: {
+      name: 'id',
+      type: ddb.AttributeType.STRING,
+    },
+  });
+  
+}
 }
